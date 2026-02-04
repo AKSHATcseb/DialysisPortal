@@ -1,0 +1,14 @@
+.cta{
+  padding:80px 20px;
+  text-align:center;
+  background:#F0FDFA;
+}
+
+.cta button{
+  padding:14px 30px;
+  background:#1ABC9C;
+  color:white;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+}

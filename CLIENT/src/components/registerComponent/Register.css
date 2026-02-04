@@ -1,0 +1,99 @@
+*{
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* 🌿 Teal + Mint Background */
+.register-container{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  background: linear-gradient(135deg,#1ABC9C,#A8E6CF);
+}
+
+/* Card */
+.register-card{
+  background:#ffffff;
+  width:100%;
+  max-width:400px;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 18px 40px rgba(0,0,0,0.18);
+  text-align:center;
+}
+
+/* Headings */
+.register-card h2{
+  font-size:26px;
+  color:#0F766E;
+  margin-bottom:6px;
+}
+
+.register-card p{
+  color:#4B5563;
+  margin-bottom:22px;
+}
+
+/* Inputs + Select */
+.register-card input,
+.register-card select{
+  width:100%;
+  padding:14px;
+  margin:10px 0;
+  border-radius:10px;
+  border:1px solid #D1FAE5;
+  font-size:15px;
+  background:#F0FDFA;
+}
+
+.register-card input:focus,
+.register-card select:focus{
+  outline:none;
+  border-color:#1ABC9C;
+  background:#ffffff;
+}
+
+/* OTP Button */
+.otp-btn{
+  width:100%;
+  padding:14px;
+  margin-top:15px;
+  background:#1ABC9C;
+  color:#ffffff;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+
+.otp-btn:hover{
+  background:#16A085;
+  transform:translateY(-1px);
+}
+
+.login-link{
+  margin-top:18px;
+  font-size:14px;
+  color:#4B5563;
+}
+
+.login-link span{
+  color:#1ABC9C;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.login-link span:hover{
+  text-decoration:underline;
+}
+
+
+/* Desktop spacing */
+@media (min-width:768px){
+  .register-card{
+    padding:40px;
+  }
+}

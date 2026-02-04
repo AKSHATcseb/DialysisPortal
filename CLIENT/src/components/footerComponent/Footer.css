@@ -1,0 +1,91 @@
+*{
+  box-sizing:border-box;
+  /* font-family:"Segoe UI", sans-serif; */
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Footer main */
+.footer{
+  background:#F0FDFA;          /* light mint background */
+  border-top:1px solid #D1FAE5;
+  padding:40px 30px 15px;
+  color:#0F766E;
+}
+
+/* Layout */
+.footer-container{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  flex-wrap:wrap;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* Brand */
+.footer-brand h3{
+  font-size:24px;
+  margin-bottom:8px;
+  color:#0F766E;
+}
+
+.footer-brand span{
+  color:#1ABC9C;
+}
+
+.footer-brand p{
+  color:#4B5563;
+  max-width:260px;
+}
+
+/* Links */
+.footer-links{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.footer-links a{
+  text-decoration:none;
+  color:#0F766E;
+  font-size:14px;
+  transition:0.2s ease;
+}
+
+.footer-links a:hover{
+  color:#1ABC9C;
+}
+
+/* Contact */
+.footer-contact p{
+  font-size:14px;
+  color:#4B5563;
+  margin:6px 0;
+}
+
+/* Bottom bar */
+.footer-bottom{
+  text-align:center;
+  margin-top:30px;
+  padding-top:15px;
+  border-top:1px solid #D1FAE5;
+  font-size:13px;
+  color:#4B5563;
+}
+
+/* Mobile responsive */
+@media (max-width:768px){
+  .footer-container{
+    flex-direction:column;
+    text-align:center;
+    align-items:center;
+  }
+
+  .footer-links{
+    align-items:center;
+  }
+
+  .footer-brand p{
+    max-width:none;
+  }
+}

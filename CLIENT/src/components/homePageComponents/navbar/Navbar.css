@@ -1,0 +1,73 @@
+*{
+  box-sizing:border-box;
+  font-family:"Segoe UI", sans-serif;
+}
+
+/* Navbar container */
+.navbar{
+  width:100%;
+  min-height:90px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 30px;
+  background:#FFFFFF;
+  border-bottom:1px solid #D1FAE5;
+
+  position:fixed;     /* 👈 makes it static */
+  top:0;
+  left:0;
+  z-index:1000;       /* stays above all sections */
+}
+
+
+/* Logo */
+.logo-img{
+  height:140px;
+  object-fit:contain;
+  cursor:pointer;
+}
+
+/* Buttons container */
+.nav-buttons{
+  display:flex;
+  gap:14px;
+}
+
+
+/* Login button (outline premium) */
+.login-btn{
+  height:40px;
+  padding:0 22px;
+  background:transparent;
+  border:2px solid #102575;
+  color:#102575;
+  border-radius:10px;
+  font-size:22px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.25s ease;
+}
+
+.login-btn:hover{
+  background:#102575;
+  color:#ffffff;
+  box-shadow:0 6px 14px rgba(26,188,156,0.3);
+}
+
+
+/* Mobile responsive */
+@media (max-width:600px){
+  .navbar{
+    padding:12px 18px;
+  }
+
+  .logo-img{
+    height:45px;
+  }
+
+  .login-btn{
+    padding:7px 16px;
+    font-size:13px;
+  }
+}

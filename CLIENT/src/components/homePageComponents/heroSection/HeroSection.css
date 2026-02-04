@@ -1,0 +1,117 @@
+*{
+  box-sizing:border-box;
+  font-family:"Poppins", sans-serif;
+}
+
+/* HERO SECTION */
+.hero{
+  position:relative;
+  background-image:url("/images/hero.avif");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  padding:110px 0;
+
+  /* 🌫 Shadow */
+  box-shadow:0 20px 40px rgba(0,0,0,0.25);
+
+  /* Smooth animation */
+  transition:0.4s ease;
+  border-radius:20px;
+  margin:20px;
+}
+
+.hero:hover{
+  transform:translateY(-6px);
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.35),
+    0 0 20px rgba(26,188,156,0.4);
+}
+
+
+/* Fade overlay */
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to right,
+    rgba(240,253,250,0.95),
+    rgba(240,253,250,0.6),
+    rgba(240,253,250,0.2)
+  );
+}
+
+/* Content layout */
+.hero-content{
+  position:relative;
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+}
+
+/* LEFT SIDE TEXT */
+.hero-left{
+  max-width:600px;
+}
+
+.hero-left h1{
+  font-size:68px;
+  font-weight:800;
+  line-height:1.1;
+  color:#FFFFFF;
+}
+
+.hero-left .highlight{
+  color:#FFFFFF;
+}
+
+/* Sub text */
+.hero-subtext{
+  margin-top:18px;
+  font-size:18px;
+  color:#a8a8a8;
+}
+
+/* CTA button */
+.hero-btn{
+  margin-top:28px;
+  padding:15px 36px;
+  background:teal;
+  color:white;
+  border:none;
+  border-radius:16px;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.25s ease;
+}
+
+.hero-btn:hover{
+  background:#16A085;
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(26,188,156,0.35);
+}
+
+/* 📱 MOBILE */
+@media (max-width:768px){
+
+  .hero{
+    padding:80px 0;
+    background-image:url("/images/heromobile.jpg");
+    margin: 0px;
+  }
+
+  .hero-left h1{
+    font-size:36px;
+  }
+
+  .hero-subtext{
+    font-size:16px;
+  }
+
+  .hero-content{
+    justify-content:center;
+    text-align:center;
+  }
+}

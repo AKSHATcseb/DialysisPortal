@@ -1,0 +1,208 @@
+*{
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* 🌿 Teal + Mint Gradient Background */
+.login-container{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  background: linear-gradient(135deg,#1ABC9C,#A8E6CF);
+}
+
+/* Clean modern card */
+.login-card{
+  background:#ffffff;
+  width:100%;
+  max-width:380px;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 18px 40px rgba(0,0,0,0.18);
+  text-align:center;
+}
+
+/* Headings */
+.login-card h2{
+  font-size:26px;
+  margin-bottom:6px;
+  color:#0F766E;
+}
+
+.login-card p{
+  color:#4B5563;
+  margin-bottom:22px;
+}
+
+/* Inputs */
+.login-card input{
+  width:100%;
+  padding:14px;
+  margin:10px 0;
+  border-radius:10px;
+  border:1px solid #D1FAE5;
+  font-size:15px;
+  background:#F0FDFA;
+}
+
+.login-card input:focus{
+  outline:none;
+  border-color:#1ABC9C;
+  background:#ffffff;
+}
+
+/* Login Button */
+.login-btn{
+  width:100%;
+  padding:14px;
+  background:#1ABC9C;
+  color:#ffffff;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+  margin-top:15px;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+
+.login-card button:hover{
+  background:#16A085;
+  transform: translateY(-1px);
+}
+
+/* Links */
+.extra-links{
+  margin-top:15px;
+  display:flex;
+  justify-content:space-between;
+}
+
+.extra-links a{
+  font-size:14px;
+  color:#0F766E;
+  text-decoration:none;
+}
+
+.extra-links a:hover{
+  text-decoration:underline;
+}
+
+/* Password field with simple show/hide button */
+
+.password-wrapper{
+  position:relative;
+  width:100%;
+}
+
+.password-wrapper input{
+  width:100%;
+  padding-right:80px; 
+}
+
+/* Simple modern eye button */
+.show-btn{
+  position:absolute;
+  right:10px;
+  top:50%;
+  transform:translateY(-50%);
+  background:none;
+  border:none;
+  cursor:pointer;
+  font-size:18px;
+  color:#1ABC9C;
+  padding:4px 6px;
+
+  /* hidden by default */
+  opacity:0;
+  pointer-events:none;
+}
+
+/* show on hover or focus */
+.password-wrapper:hover .show-btn,
+.password-wrapper input:focus + .show-btn{
+  opacity:1;
+  pointer-events:auto;
+}
+
+
+
+
+/* 🌊 Background animation */
+
+.bg-animation{
+  position:absolute;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  top:0;
+  left:0;
+  z-index:0;
+}
+
+.bg-animation span{
+  position:absolute;
+  display:block;
+  width:60px;
+  height:60px;
+  background: rgba(255,255,255,0.15);
+  border-radius:50%;
+  animation: float 20s linear infinite;
+  bottom:-150px;
+}
+
+/* Different sizes & speeds */
+
+.bg-animation span:nth-child(1){
+  left:10%;
+  width:80px;
+  height:80px;
+  animation-duration:22s;
+}
+
+.bg-animation span:nth-child(2){
+  left:30%;
+  width:40px;
+  height:40px;
+  animation-duration:15s;
+}
+
+.bg-animation span:nth-child(3){
+  left:60%;
+  width:100px;
+  height:100px;
+  animation-duration:28s;
+}
+
+.bg-animation span:nth-child(4){
+  left:80%;
+  width:50px;
+  height:50px;
+  animation-duration:18s;
+}
+
+@keyframes float{
+  0%{
+    transform: translateY(0) rotate(0deg);
+    opacity:1;
+  }
+  100%{
+    transform: translateY(-110vh) rotate(360deg);
+    opacity:0;
+  }
+}
+
+/* Make sure login card stays above animation */
+.login-card{
+  position:relative;
+  z-index:1;
+}
+
+
+/* Desktop spacing improvement */
+@media (min-width:768px){
+  .login-card{
+    padding:40px;
+  }
+}

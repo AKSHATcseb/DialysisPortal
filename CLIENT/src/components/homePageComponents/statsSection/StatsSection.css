@@ -1,0 +1,30 @@
+.stats{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap: 120px;
+  padding:60px;
+  color:black;
+  font-size:22px;
+  font-weight:700;
+  flex-wrap:wrap;   /* 👈 allows wrapping on small screens */
+}
+
+/* Tablet */
+@media (max-width:900px){
+  .stats{
+    gap:40px;
+    font-size:20px;
+    padding:50px 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width:500px){
+  .stats{
+    flex-direction:column;   /* stack vertically */
+    gap:25px;
+    font-size:18px;
+    padding:40px 20px;
+  }
+}
