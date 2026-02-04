@@ -6,7 +6,7 @@ import Navbar from "../components/homePageComponents/navbar/Navbar";
 import ServicesSection from "../components/homePageComponents/servicesSection/ServicesSection";
 import StatsSection from "../components/homePageComponents/statsSection/StatsSection";
 
-export default function Home() {
+export default function HomePage() {
   return (
     // <div className="bg-teal-50 home-wrapper pt-36 px-4">
       <div className="">
@@ -15,7 +15,7 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       {/* <HowItWorks /> */}
-      {/* <StatsSection /> */}
+      <StatsSection />
       <Footer />
 
     </div>

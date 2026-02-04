@@ -65,7 +65,7 @@
 }
 
 .hero-image{
-  width:420px;
+  width:750px;
   max-width:100%;
 }
 
@@ -102,7 +102,7 @@
   }
 
   .hero-image{
-    width:260px;
+    width:450px;
   }
 
   .hero-btn{
@@ -115,6 +115,6 @@
 @media(max-width:480px){
 
   .hero-image{
-    width:220px;
+    width:450px;
   }
 }

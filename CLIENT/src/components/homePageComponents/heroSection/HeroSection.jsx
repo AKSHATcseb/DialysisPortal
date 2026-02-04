@@ -18,13 +18,13 @@ export default function HeroSection() {
         </div>
 
         {/* RIGHT IMAGE */}
-        {/* <div className="hero-right">
+        <div className="hero-right">
           <img 
-            src="/images/doctor.png" 
+            src="/images/doc3.png" 
             alt="Healthcare Illustration" 
             className="hero-image"
           />
-        </div> */}
+        </div>
 
       </div>
 
