@@ -8,14 +8,15 @@ import StatsSection from "../components/homePageComponents/statsSection/StatsSec
 
 export default function Home() {
   return (
-    <div className="bg-teal-50 home-wrapper pt-36 px-4">
+    // <div className="bg-teal-50 home-wrapper pt-36 px-4">
+      <div className="bg-[#F4F4F4] home-wrapper px-4">
 
       <Navbar />
       <HeroSection />
-      <ServicesSection />
+      {/* <ServicesSection /> */}
       {/* <HowItWorks /> */}
-      <StatsSection />
-      <Footer />
+      {/* <StatsSection /> */}
+      {/* <Footer /> */}
 
     </div>
   );

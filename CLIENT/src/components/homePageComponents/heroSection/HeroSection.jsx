@@ -9,20 +9,22 @@ export default function HeroSection() {
         {/* LEFT TEXT */}
         <div className="hero-left">
 
-          <h1>Your Bridge to Better</h1>
-          <h1 className="highlight">Medical Care</h1>
-
-
-
-          {/* <p className="hero-subtext">
-            Find dialysis centers, manage appointments, and receive care
-            easily with HealthSetu.
-          </p> */}
+          <h1>YOUR BRIDGE TO BETTER</h1>
+          <h1 className="highlight">MEDICAL CARE</h1>
 
           <button className="hero-btn">
             Register To Continue
           </button>
         </div>
+
+        {/* RIGHT IMAGE */}
+        {/* <div className="hero-right">
+          <img 
+            src="/images/doctor.png" 
+            alt="Healthcare Illustration" 
+            className="hero-image"
+          />
+        </div> */}
 
       </div>
 
