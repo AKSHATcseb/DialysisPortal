@@ -5,88 +5,122 @@
 
 /* Section */
 .services{
-  /* background: #000; */
-  padding:90px 30px;
-  background:#F0FDFA;
+  padding:100px 30px;
+  background:linear-gradient(180deg,#F0FDFA,#ECFEFF);
   text-align:center;
 }
 
 .services h2{
-  font-size:34px;
+  font-size:36px;
   font-weight:700;
   color:#0F766E;
-  margin-bottom:20px;
+  margin-bottom:60px;
 }
 
 /* Grid */
 .service-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:28px;
+  gap:32px;
   max-width:1200px;
   margin:auto;
 }
 
 /* Card */
 .card{
-  background:white;
-  border-radius:22px;
-  padding:40px 20px;
-  box-shadow:0 12px 28px rgba(0,0,0,0.08);
-  transition:0.35s ease;
+  background:rgb(255, 255, 255);
+  backdrop-filter:blur(8px);
+  border-radius:26px;
+  padding:48px 24px;
+  box-shadow:0 18px 40px rgba(0,0,0,0.08);
+  transition:all 0.4s ease;
   cursor:pointer;
   position:relative;
+  overflow:hidden;
 }
 
-/* Teal top accent */
-.card::before{
+/* Gradient glow on hover */
+.card::after{
   content:"";
   position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:4px;
-  /* background:#1ABC9C; */
-  border-radius:22px 22px 0 0;
+  inset:0;
+  /* background:linear-gradient(120deg,transparent,#c0d5cd,transparent); */
+  /* background:#000000; */
+  opacity:0;
+  transition:0.4s;
 }
 
-/* Hover animation */
+.card:hover::after{
+  opacity:1;
+}
+
+/* Lift effect */
 .card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 25px 50px rgba(26,188,156,0.25);
+  transform:translateY(-14px) scale(1.02);
+  box-shadow:0 30px 70px rgba(26,188,156,0.35);
 }
 
-/* Icon circle */
+/* Icon */
 .icon-circle{
-  width:80px;
-  height:80px;
-  margin:0 auto 22px;
-  background:#E6FFFA;
-  color:#1ABC9C;
-  font-size:36px;
+  width:90px;
+  height:90px;
+  margin:0 auto 26px;
+  background:linear-gradient(135deg,#0f806a,#1bac77);
+  color:white;
+  font-size:40px;
   display:flex;
   align-items:center;
   justify-content:center;
   border-radius:50%;
-  box-shadow:0 6px 14px rgba(26,188,156,0.25);
+  box-shadow:0 10px 22px rgba(26,188,156,0.45);
+  transition:0.4s ease;
+}
+
+/* Icon animation */
+.card:hover .icon-circle{
+  transform:rotate(8deg) scale(1.1);
 }
 
 /* Text */
 .card-text{
-  font-size:17px;
+  font-size:18px;
   font-weight:600;
   color:#0F766E;
+  letter-spacing:0.3px;
 }
 
-/* 📱 Responsive */
-@media (max-width:900px){
+/* ===================== */
+/* 📱 Tablet */
+@media(max-width:1000px){
   .service-grid{
     grid-template-columns:repeat(2,1fr);
   }
 }
 
-@media (max-width:500px){
+/* ===================== */
+/* 📱 Mobile */
+@media(max-width:600px){
+  .services{
+    padding:70px 20px;
+  }
+
+  .services h2{
+    font-size:30px;
+    margin-bottom:40px;
+  }
+
   .service-grid{
     grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .card{
+    padding:40px 20px;
+  }
+
+  .icon-circle{
+    width:75px;
+    height:75px;
+    font-size:34px;
   }
 }

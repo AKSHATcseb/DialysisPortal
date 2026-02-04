@@ -1,8 +1,3 @@
-*{
-  box-sizing:border-box;
-  font-family:"Poppins", sans-serif;
-}
-
 /* HERO SECTION */
 .hero{
   width:100%;
@@ -10,81 +5,59 @@
   display:flex;
   justify-content:center;
   align-items:center;
-  background:#F0FDFA; /* light teal bg (matches HealthSetu theme) */
+  background:#F0FDFA;
+  padding-top:100px; /* space for fixed navbar */
 }
 
-
-/* Fade overlay */
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    to right,
-    rgba(240,253,250,0.95),
-    rgba(240,253,250,0.6),
-    rgba(240,253,250,0.2)
-  );
-}
-
-/* Content layout */
+/* Layout */
 .hero-content{
   width:90%;
   max-width:1200px;
   display:flex;
   align-items:center;
   justify-content:space-between;
+  gap:40px;
 }
 
-.highlight{
-  color:#1ABC9C;
-}
-
-/* LEFT SIDE TEXT */
+/* LEFT TEXT */
 .hero-left{
   flex:1;
 }
 
 .hero-left h1{
-  font-size:68px;
+  font-size:clamp(32px, 5vw, 68px);
   font-weight:800;
   line-height:1.1;
   color:#0F766E;
 }
 
+/* Big medical care text */
 .hero-left .highlight{
-  color:#000000;
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: 120px;
-  font-weight: 700;
-  font-style: normal;
+  color:#000;
+  font-family:"Barlow Condensed", sans-serif;
+  font-size:clamp(60px, 12vw, 120px);
+  font-weight:700;
 }
 
-/* Sub text */
-.hero-subtext{
-  margin-top:18px;
-  font-size:18px;
-  color:#a8a8a8;
-}
-
-/* CTA button */
+/* Button */
 .hero-btn{
-  margin-top:30px;
+  margin-top:28px;
   padding:14px 28px;
   background:#10ad8e;
   border:none;
   color:white;
   font-size:16px;
   font-weight:600;
-  border-radius:8px;
+  border-radius:10px;
   cursor:pointer;
-  transition:0.3s;
+  transition:0.3s ease;
 }
-
 
 .hero-btn:hover{
   background:#0F766E;
 }
 
+/* RIGHT IMAGE */
 .hero-right{
   flex:1;
   display:flex;
@@ -92,30 +65,56 @@
 }
 
 .hero-image{
-  width:450px;
+  width:420px;
   max-width:100%;
 }
 
+/* ===================== */
+/* 📱 TABLET */
+@media(max-width:1024px){
 
+  .hero-image{
+    width:320px;
+  }
+}
+
+/* ===================== */
 /* 📱 MOBILE */
-@media (max-width:768px){
+@media(max-width:768px){
 
   .hero{
-    padding:80px 0;
-    background: transparent;
-    margin: 0px;
-  }
-
-  .hero-left h1{
-    font-size:36px;
-  }
-
-  .hero-subtext{
-    font-size:16px;
+    padding:120px 0 60px;
   }
 
   .hero-content{
-    justify-content:center;
+    flex-direction:column;   /* STACK */
     text-align:center;
+  }
+
+  .hero-right{
+    order:2;   /* IMAGE BELOW */
+    justify-content:center;
+    margin-top:30px;
+  }
+
+  .hero-left{
+    order:1;
+  }
+
+  .hero-image{
+    width:260px;
+  }
+
+  .hero-btn{
+    margin-top:22px;
+  }
+}
+
+/* ===================== */
+/* 📱 SMALL MOBILE */
+@media(max-width:480px){
+
+  .hero-image{
+    width:220px;
   }
 }
