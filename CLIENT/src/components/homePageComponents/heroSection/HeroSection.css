@@ -12,11 +12,11 @@
 /* Layout */
 .hero-content{
   width:90%;
-  max-width:1200px;
+  max-width:1600px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:40px;
+  /* gap:40px; */
 }
 
 /* LEFT TEXT */

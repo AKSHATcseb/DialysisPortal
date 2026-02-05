@@ -1,0 +1,11 @@
+.dash-title{
+  font-size:32px;
+  color:#042F2E;
+  margin-bottom:35px;
+}
+
+@media (max-width:600px){
+  .dash-title{
+    font-size:26px;
+  }
+}

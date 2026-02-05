@@ -1,0 +1,21 @@
+.dashboard{
+  display:flex;
+  min-height:100vh;
+  background:#F0FDFA;
+}
+
+.main{
+  flex:1;
+  padding:40px;
+}
+
+/* Mobile */
+@media (max-width:600px){
+  .dashboard{
+    flex-direction:column;
+  }
+
+  .main{
+    padding:25px;
+  }
+}

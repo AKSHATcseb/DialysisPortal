@@ -1,0 +1,35 @@
+.actions{
+  margin-top:45px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.action-card{
+  background:#1ABC9C;
+  color:white;
+  padding:26px;
+  border-radius:18px;
+  text-align:center;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+
+.action-card:hover{
+  background:#16A085;
+  transform:translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .actions{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media (max-width:600px){
+  .actions{
+    grid-template-columns:1fr;
+  }
+}
